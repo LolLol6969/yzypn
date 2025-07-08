@@ -1,8 +1,6 @@
-// JavaScript vanilla per gestire i click sui link
 function handleLinkClick(section, path) {
     console.log('Navigating to:', section, 'at path:', path);
     
-    // Simulazione di navigazione - in un'app reale questi potrebbero essere link a pagine diverse
     switch(section) {
         case 'YZYPRN 1':
             console.log('Loading video content 1...');
@@ -23,19 +21,15 @@ function handleLinkClick(section, path) {
             console.log('Unknown section');
     }
     
-    // Previeni il comportamento di default del link
     return false;
 }
 
-// Log di inizializzazione
 console.log('YEEZYPORN landing page initialized');
 
-// Funzione per gestire il resize della finestra (se necessario)
 window.addEventListener('resize', function() {
     console.log('Window resized to:', window.innerWidth, 'x', window.innerHeight);
 });
 
-// Prevenire il refresh accidentale della pagina
 window.addEventListener('beforeunload', function(e) {
     console.log('Page unload prevented');
 });
