@@ -1,0 +1,54 @@
+/* Stili per la pagina del video player */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Sfondo nero nel caso il video carichi lentamente */
+    overflow: hidden; /* Nasconde le barre di scorrimento */
+}
+
+#video-player {
+    /* Posizionamento fisso per coprire l'intera finestra */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    /* Assicura che il video copra sempre l'area, senza spazi vuoti */
+    min-width: 100%;
+    min-height: 100%;
+    
+    /* Dimensioni automatiche per mantenere le proporzioni */
+    width: auto;
+    height: auto;
+    
+    /* Centra il video */
+    transform: translateX(-50%) translateY(-50%);
+    
+    /* object-fit: cover fa sì che il video copra l'intero contenitore 
+       mantenendo le proporzioni, tagliando le parti in eccesso se necessario. */
+    object-fit: cover;
+    
+    /* z-index per stare sotto altri elementi come i pulsanti */
+    z-index: 1;
+}
+
+.back-button {
+    /* Stile per il pulsante "indietro" */
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 2; /* Sta sopra al video */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Yeezy", monospace;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
